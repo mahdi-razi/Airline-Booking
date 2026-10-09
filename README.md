@@ -1,6 +1,6 @@
-# Airline Reservation System + RAG Chatbot
+# Airline Reservation System
 
-A comprehensive airline reservation system built with Qt6, featuring a chatbot assistant that uses RAG (Retrieval-Augmented Generation) architecture with semantic search and LLM technology to help users with bookings, policies, and flight information.
+A comprehensive airline reservation system built with Qt6, featuring a chatbot assistant to help users with bookings, policies, and flight information.
 
 ---
 
@@ -10,11 +10,7 @@ This project is a full-featured airline reservation system with a modern GUI bui
 
 - **Passenger Portal**: Search flights, book tickets, manage bookings, wallet system
 - **Admin Portal**: Add/update flights, manage flight status, view all bookings
-- **AI Chatbot Assistant**: RAG-based system powered by ONNX Runtime (sentence-transformers) and Groq LLM API
-  - Semantic search using sentence embeddings over airline policies
-  - Context-aware responses combining retrieved knowledge with real-time flight/booking data
-  - Conversational memory for multi-turn interactions
-  - Retrieval-Augmented Generation for accurate, grounded responses
+- **Chatbot Assistant**: RAG-based system powered by ONNX Runtime (sentence-transformers) and Groq LLM API
 
 ---
 
@@ -54,15 +50,6 @@ These are some screenshots of the app.
 - View all flights and bookings
 - Add new flights to the system
 - Update flight details
-
-### AI Chatbot Features
-- **Retrieval Phase**: Semantic search using sentence-transformers (all-MiniLM-L6-v2) model via ONNX Runtime
-- **Generation Phase**: Natural language generation powered by Groq's Llama 3.3 70B model
-- **Knowledge Base**: Pre-indexed airline policies (baggage, cancellation, check-in, meals, insurance)
-- **Real-time Data Integration**: Combines retrieved policy documents with live flight and booking data
-- **Context-aware responses**: RAG system grounds LLM responses in factual data
-- **Conversational memory**: Maintains conversation history for follow-up questions
-- **Intent detection**: Uses semantic similarity for query understanding
 
 ---
 
@@ -235,24 +222,4 @@ bin\AirlineSystem.exe
 ```
 
 ---
-
-### the Chatbot
-The chatbot uses a RAG architecture with two phases:
-
-**Retrieval Phase**:
-- User query is converted to embedding using ONNX-based BERT model (all-MiniLM-L6-v2)
-- Semantic search finds top most relevant documents from knowledge base using cosine similarity
-- Context is assembled from:
-  - Retrieved policy documents
-  - Real-time flight data (if query mentions flights)
-  - User's booking information (if logged in)
-  - Conversation history (for follow-up questions)
-
-**Generation Phase**:
-- Complete context is sent to Groq's Llama 3.3 70B model
-- LLM generates response grounded in retrieved information
-- Response is displayed in chat interface
-
----
-
 
