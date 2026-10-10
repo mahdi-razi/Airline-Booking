@@ -1,6 +1,6 @@
 # Airline Reservation System
 
-A comprehensive airline reservation system built with Qt6, featuring a chatbot assistant to help users with bookings, policies, and flight information.
+A comprehensive airline reservation system built with Qt6.
 
 ---
 
@@ -10,7 +10,6 @@ This project is a full-featured airline reservation system with a modern GUI bui
 
 - **Passenger Portal**: Search flights, book tickets, manage bookings, wallet system
 - **Admin Portal**: Add/update flights, manage flight status, view all bookings
-- **Chatbot Assistant**: RAG-based system powered by ONNX Runtime (sentence-transformers) and Groq LLM API
 
 ---
 
